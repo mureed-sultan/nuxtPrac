@@ -10,6 +10,7 @@
       <GlobalButtons
         :btnText="propsGet.buttonText"
         :link="'https://github.com/stateempire/animted'"
+        btnType="transparnt"
       />
       </div>
     </div>
