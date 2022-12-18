@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <header>
+    <!-- <div> -->
+        <!-- <header>
         <div class="logo">THIS IS LOGO</div>
         <ul>
         <li><NuxtLink to="/">Homepage</NuxtLink></li>
@@ -10,9 +10,9 @@
         
         </ul>
         </header>
-        <div>
-        <slot/></div>
-    </div>
+        <div> -->
+        <slot/>
+    <!-- </div> -->
 </template>
 
 <style>

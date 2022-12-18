@@ -1,27 +1,21 @@
 <template>
-    <div>
-    <!-- <p>This is Homepage contnet </p>
-        <img src="~/assets/images/1_mh8il3s3hB0Xdpx6ffQLTw.png" alt="">
-    <CheckComp /> -->
-    <HomeWelcome class="bg-green-300"/>
-    <CheckComp/>
-    <!-- <button @click="increse">Increment</button>
-    <p>{{count}}</p>
-    <button @click="decrease">Decrement</button> -->
-    </div>
+  <section class="container flex justify-center">
+  <PageSectionsCardAndText
+      :image="'/assets/images/1_mh8il3s3hB0Xdpx6ffQLTw.png'"
+      :title="'Apprenticeships'"
+      :text="'Australian  Apprenticeships offer you the opportunity to study and earn an income while undertaking a qualification. You can use your qualification to work anywhere in Australia.'"
+      buttonText="Australian Apprenticeships"
+    /> 
+
+    <PageSectionsCardAndText
+      :image="'/assets/images/1_mh8il3s3hB0Xdpx6ffQLTw.png'"
+      :title="'Apprenticeships'"
+      :text="'Australian  Apprenticeships offer you the opportunity to study and earn an income while undertaking a qualification. You can use your qualification to work anywhere in Australia.'"
+      buttonText="My Skills"
+    />    <PageSectionsCardAndText
+      :image="'/assets/images/1_mh8il3s3hB0Xdpx6ffQLTw.png'"
+      :title="'Apprenticeships'"
+      :text="'Australian  Apprenticeships offer you the opportunity to study and earn an income while undertaking a qualification. You can use your qualification to work anywhere in Australia.'"
+    /> 
+  </section>
 </template>
-
-<script setup>
-// const count = ref(10)
-
-// const increse = ()=>{
-//     count.value ++;
-// }
-// const decrease = ()=>{
-//     count.value --;
-// }
-</script>
-
-<style scoped>
-
-</style>
