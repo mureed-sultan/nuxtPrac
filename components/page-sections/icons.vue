@@ -1,4 +1,5 @@
 <template>
+
   <button class="slick-prev slick-arrow" aria-label="Previous" type="button" aria-disabled="false" style="">
     Previous
   </button>
@@ -48,4 +49,5 @@
       </a>
     </figure>
   </div>
+  
 </template>
