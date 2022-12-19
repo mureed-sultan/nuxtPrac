@@ -1,14 +1,10 @@
 <template>
-    <div>
-<h1>About</h1>
-<p>THis is an about page</p>
-    </div>
+  <div>
+    <h1>About</h1>
+    <p>THis is an about page</p>
+  </div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
