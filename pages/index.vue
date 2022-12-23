@@ -4,4 +4,16 @@
   </main>
 </template>
 
-<script src="~/scripts/page/page.js"></script>
+<script>
+  import {getPage} from '~/scripts/entities/pages.js';
+
+  export default defineComponent({
+    props: {
+      page_id: String,
+      sections: Array,
+    },
+    async setup() {
+      return await getPage('home');
+    }
+  })
+</script>

@@ -71,7 +71,7 @@ export default async function (specs) {
   let results = [];
   appendParams('', specs.include);
   params = params.replace(/,+$/, '');
-  const resData = (await axios.get(process.env.apiUrl + '/jsonapi/' + specs.endpoint + (specs.endpoint.indexOf('?') >= 0 ? '&' : '?') + params)).data;
+  const resData = (await axios.get('http://nuxt-01-drupal.uk.to/jsonapi/' + specs.endpoint + (specs.endpoint.indexOf('?') >= 0 ? '&' : '?') + params)).data;
   resData.data.forEach(source => {
     results.push(pullData(makeTarget(source), source, specs.include));
   });
