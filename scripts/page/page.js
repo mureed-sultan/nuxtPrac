@@ -5,6 +5,10 @@ import PageSection from '~/components/PageSection.vue';
 export default {
   name: 'Page',
   components: { PageSection },
+  props: {
+    page_id: 'String',
+    sections: 'Object',
+  },
   head () {
     let data = {};
     if (this.title && this.page_id != 'home') {

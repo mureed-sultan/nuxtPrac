@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :class="page_id">
     <PageSection v-for="(section, i) in sections" :section="section" :key="i" />
   </main>
 </template>
