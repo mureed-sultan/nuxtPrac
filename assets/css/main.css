@@ -1,6 +1,18 @@
+/* adding pages  */
+@import './pages/home.css';
+
+
+
+/* declare tailwind  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+
 
 img {
   @apply w-full h-full;
@@ -8,3 +20,10 @@ img {
 * {
   @apply m-0 p-0;
 }
+
+:root{
+  --yellow : #F4CA54;
+  --blue:#375C79;
+}
+
+/* pages import  */

@@ -1,0 +1,9 @@
+.pagehero{
+  @apply grid grid-cols-12 relative w-screen h-5/6;
+  figure{
+   @apply col-span-12;
+  }
+  /* .content{
+   @apply absolute col-span-8 w-full h-full;
+  } */
+}
