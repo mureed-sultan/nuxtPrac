@@ -5,15 +5,15 @@
 </template>
 
 <script>
-  import {getPage} from '~/scripts/entities/pages.js';
+import { getPage } from '~/scripts/entities/pages.js';
 
-  export default defineComponent({
-    props: {
-      page_id: String,
-      sections: Array,
-    },
-    async setup() {
-      return await getPage('home');
-    }
-  })
+export default defineComponent({
+  props: {
+    page_id: String,
+    sections: Array,
+  },
+  async setup() {
+    return await getPage('about');
+  }
+})
 </script>

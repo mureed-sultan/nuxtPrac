@@ -1,8 +1,8 @@
 <template>
-  <section class="pagehero" :style="backImage">
+  <section class="pagehero">
       <figure>
-        <!-- <img :src="'/_nuxt/static/' +card.media.image.uri.url.slice(21) " />       -->
-      </figure>
+        <img :src="'/_nuxt/static/' +card.media.image.uri.url.slice(21) " />
+       </figure>
       <div class="content">
       <div class="heading">
           <GlobalColouredHeading v-for="(data) in card.headings" :type="data.heading_type" :text="data.text" />
@@ -22,14 +22,13 @@ export default {
     card: Object,
     text: String
   },
-  computed:{
-    backImage(){
-      return{
-        backgroundImage: 'url(/_nuxt/static/' + this.card.media.image.uri.url.slice(21) + ')'
-      }
-    }
-  }
+  // computed:{
+  //   backImage(){
+  //     return{
+  //       backgroundImage: 'url(/_nuxt/static/' + this.card.media.image.uri.url.slice(21) + ')'
+  //     }
+  //   }
+  // }
 }
-let wid = 500
 </script>
 

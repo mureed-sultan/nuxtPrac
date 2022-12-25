@@ -1,0 +1,23 @@
+.card-and-text{
+  @apply grid grid-cols-2 m-auto px-8 pt-14;
+  .card{
+    .heading{
+      @apply bottom-28 top-auto;
+    }
+  }
+  .text-section{
+    @apply text-sm m-auto;
+    strong{
+      color: var(--blue);
+    }
+    h5{
+      background-color: var(--yellow);
+      color: var(--blue);
+      @apply text-lg px-2;
+       
+    }
+    p{
+      @apply my-3;
+    }
+  }
+}

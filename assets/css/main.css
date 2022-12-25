@@ -1,6 +1,11 @@
-/* adding pages  */
+/* @import './pages/about.css'; */
 @import './pages/home.css';
+@import './pages/about.css';
 
+/* component css  */
+@import './components/card.css';
+@import './components/where-next.css';
+@import './components/card-and-text.css';
 
 
 /* declare tailwind  */
@@ -9,21 +14,18 @@
 @tailwind utilities;
 
 
-
-
-
-
-
 img {
   @apply w-full h-full;
 }
 * {
   @apply m-0 p-0;
 }
-
 :root{
   --yellow : #F4CA54;
   --blue:#375C79;
 }
 
 /* pages import  */
+.light{
+  background-color: #E6E7EC;
+}

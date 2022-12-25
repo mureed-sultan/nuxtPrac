@@ -1,9 +1,21 @@
-.pagehero{
-  @apply grid grid-cols-12 relative w-screen h-5/6;
-  figure{
-   @apply col-span-12;
+.pagehero {
+  @apply w-screen relative;
+  /* height: 40rem; */
+  figure {
   }
-  /* .content{
-   @apply absolute col-span-8 w-full h-full;
-  } */
+  .content {
+    @apply w-full h-full absolute top-20 left-32;
+    .heading {
+      span {
+        @apply block text-5xl my-4;
+        width: fit-content;
+      }
+    }
+    .description {
+      background-color: var(--blue);
+      color: white;
+      width: 35rem;
+      @apply p-5 mt-16 ;
+    }
+  }
 }

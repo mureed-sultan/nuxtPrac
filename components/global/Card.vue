@@ -1,12 +1,17 @@
 <template>
   <div class="card">
     <figure>
-    <img :src="'/_nuxt/assets/images/' + image" alt="">
+      <img :src="'/_nuxt/assets/images/' + image" alt="">
     </figure>
-    <div class="content">
     <div class="heading">
-    <ColouredHeading :text="text" type="secondary"/>
+      <ColouredHeading :text="text1" :type="textType1" />
+      <ColouredHeading :text="text2" :type="textType2" />
     </div>
+    <div v-if="detail" class="details">
+      {{ detail }}
+    </div>
+    <div v-if="link" class="btn-primary">
+      <GlobalButtons btn-text="Learn More" :btnLink="link" btn-type="primary" />
     </div>
   </div>
 </template>
@@ -16,17 +21,16 @@ import ColouredHeading from './ColouredHeading.vue';
 
 let a = 'footer_home_imaskilledworker.jpg'
 export default {
-    props: {
-        text: String,
-        detail: String,
-        link: String,
-        image: String
-    },
-    components: { ColouredHeading }
+  props: {
+    text1: String,
+    text2: String,
+    detail: String,
+    link: String,
+    image: String,
+    textType1:String,
+    textType2:String
+  },
+  components: { ColouredHeading }
 }
 
 </script>
-
-<style lang="scss" scoped>
-
-</style>

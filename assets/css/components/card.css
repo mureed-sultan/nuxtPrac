@@ -1,0 +1,39 @@
+.card {
+    @apply relative p-7;
+    height: 32rem;
+
+    figure {
+        @apply flex justify-end;
+
+        img {
+            @apply w-11/12;
+        }
+    }
+
+    .heading {
+        @apply flex flex-col absolute top-20 text-3xl font-bold;
+
+        span {
+            @apply px-5;
+            @apply py-1;
+            margin-top: 10px;
+            width: fit-content;
+        }
+    }
+
+    .details {
+        background-color: var(--blue);
+        color: white;
+        @apply p-3 text-xs w-10/12 relative;
+        top: -25px;
+    }
+
+    .btn-primary {
+        @apply absolute bottom-0 flex justify-center w-full;
+
+        a {
+            width: 6rem;
+            @apply text-xs;
+        }
+    }
+}

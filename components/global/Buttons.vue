@@ -1,16 +1,14 @@
 <template>
   <!-- v-bind:class = "btnType == primary?'yellow':'blue'" -->
   <div class="task_priority" :class="btnType">
-    <div class="button">
+    <div class="buttons">
       <a :href="btnLink">{{ btnText }}</a>
     </div>
   </div>
-  <!-- <div class="task_priority" :class="btnType">Hellow</div>
-  </div> -->
 </template>
 
 <script setup>
-const buttonProps = defineProps({
+const buttonsProps = defineProps({
   btnText: String,
   btnLink: String,
   btnType: String,
@@ -18,46 +16,54 @@ const buttonProps = defineProps({
 </script>
 
 <style>
-.button {
-  @apply w-full bg-no-repeat flex justify-between relative;
+.buttons {
+  @apply bg-no-repeat flex items-center justify-between relative h-8;
   transition-duration: 500ms;
 
   &:hover {
     background-position: 90% 50%;
+
     &::after {
       transition-duration: 500ms;
-      transform: translate(20px, 0px);
+      transform: translate(5px, 0px);
     }
   }
+
   &::after {
     transition-duration: 500ms;
-
     content: ">";
-    font-size: 45px;
+    font-size: 25px;
     @apply relative;
-    right: 30px;
+    right: 10px;
   }
+
   /* background-image: url("~/assets/images/next-arrow.svg"); */
   a {
-    @apply bg-no-repeat cursor-pointer font-semibold px-8 py-2 rounded-sm flex items-center w-full;
+    @apply bg-no-repeat cursor-pointer font-semibold py-2 px-2 rounded-sm flex items-center w-32;
     @apply relative bottom-0;
   }
 }
+
 .task_priority.primary {
   background-color: #f4ca54;
-  .button {
+
+  .buttons {
     color: #3d6179;
   }
 }
+
 .task_priority.secondary {
   background-color: #3d6179;
-  .button {
+
+  .buttons {
     color: white;
   }
 }
+
 .task_priority.transparnt {
   color: transparent;
-  .button {
+
+  .buttons {
     color: #3d6179;
   }
 }
