@@ -1,11 +1,11 @@
 <template>
     <div class="icons-card">
         <figure>
-            <img :src="'/_nuxt/assets/images/icons/' + indexs" alt="">
+            <img :src="'/_nuxt/assets/images' +image" alt="">
         </figure>
         <div class="content">
             <div class="heading">
-                    <ColouredHeading v-for="(item) in heading" :text="item.text" :type="item.heading_type" />
+                <ColouredHeading v-for="(item) in heading" :text="item.text" :type="item.heading_type" />
 
             </div>
             <div v-html="htmlCode"></div>
@@ -21,7 +21,7 @@ export default {
     props: {
         detail: String,
         heading: Object,
-        indexs: String
+        image: String
     },
     components: { ColouredHeading },
     data() {

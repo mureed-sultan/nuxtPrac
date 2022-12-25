@@ -1,0 +1,23 @@
+.card-point.light {
+  .para {
+    @apply pb-5 text-xs;
+  }
+  .top-para{
+    @apply mb-5 text-xs w-10/12 m-auto;
+  }
+  .card-section{
+    gap: 1.5rem;
+  }
+  .icon-cards {
+    @apply bg-white;
+    figure {
+      @apply w-full h-full;
+    }
+    .content {
+      @apply text-left px-3;
+      .heading span {
+        color: var(--blue);
+      }
+    }
+  }
+}

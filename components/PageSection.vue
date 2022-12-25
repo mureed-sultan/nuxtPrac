@@ -1,22 +1,26 @@
 <template>
-
-  <div v-if="section.type == 'card-hero-split'">
-    <p>This is test{{ section }}</p>
-  </div>
   <!-- page hero  -->
   <PageHero v-if="section.type == 'page_hero'" :card="section.card" :text="section.card.description" />
   <!-- where to next section  -->
   <WhereNext v-else-if="section.type == 'where_to_cards'" :card="section" />
   <!-- card and text section  -->
   <CardAndText v-else-if="section.type == 'card_and_text' & section.classes == 'light'" :card="section.card"
-    :type="section.classes" :text="section.text" />
+  :type="section.classes" :text="section.text" />
   <!-- card points sec  -->
   <CardPoint v-else-if="section.type == 'card_points' & section.classes == 'dark'" :card="section.cards"
-    :heading="section.heading_text.headings[0].text"
-    :type="section.classes"
-    />
-    <!-- card hero split section  -->
-<CardHeroSplit v-else-if="section.type=='card_hero_split'"/>
+  :heading="section.heading_text.headings[0]"
+  :type="section.classes"
+  />
+  <!-- card hero split section  -->
+  <CardHeroSplit v-else-if="section.type=='card_hero_split'" :card="section.split_cards"/>
+  <CardPoint v-else-if="section.type == 'card_points'" :card="section.cards"
+    :heading="section.heading_text.headings[0]"
+    :toppara="section.heading_text.text"
+    :detail="section.cta_text"
+    type="light"
+    /> 
+  <!-- <CardAndText v-else-if="section.type == 'card_and_text'" :card="section.card"
+  :type="section.classes" :text="section.text" />     -->
   <div v-else>
     <h1>
       {{ section.type }}
@@ -36,8 +40,8 @@ export default {
     WhereNext,
     CardAndText,
     CardPoint,
-    CardHeroSplit
-  },
+    CardHeroSplit,
+},
   props: {
     section: Object,
     key: Object

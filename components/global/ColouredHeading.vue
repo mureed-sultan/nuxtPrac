@@ -21,4 +21,8 @@ export default {
   color: white;
   @apply p-1;
 }
+.default{
+  color: white;
+  @apply p-1;
+}
 </style>

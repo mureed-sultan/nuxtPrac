@@ -1,0 +1,25 @@
+.card-hero-split {
+  display: flex;
+  .spilit-card {
+      .card {
+          height: auto;
+          @apply p-0;
+          @apply relative;
+          figure{
+            img{
+                width: 100%;
+            }
+          }
+          .content {
+              @apply absolute;
+              top: 20%;
+              left: 10%;
+              width: 75%;
+
+          }
+      .heading {
+        position: static;
+      }
+    }
+  }
+}

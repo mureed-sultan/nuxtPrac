@@ -12,7 +12,7 @@ export default defineComponent({
     sections: Array,
   },
   async setup() {
-    return await getPage('workers');
+    return await getPage('businesses');
   },
 })
 </script>
