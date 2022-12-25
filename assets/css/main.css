@@ -6,6 +6,7 @@
 @import './components/card.css';
 @import './components/where-next.css';
 @import './components/card-and-text.css';
+@import './components/icon-card.css';
 
 
 /* declare tailwind  */
@@ -28,4 +29,8 @@ img {
 /* pages import  */
 .light{
   background-color: #E6E7EC;
+}
+.dark{
+  background-color: #375C79;
+  color: white;
 }

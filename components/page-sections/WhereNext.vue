@@ -30,8 +30,6 @@
             link="https://stateempire.com" 
             image="footer_home_imabusiness.jpg" />
         </div>
-
-        {{ card }}
     </section>
 </template>
 

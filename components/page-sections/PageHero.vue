@@ -7,7 +7,7 @@
       <div class="heading">
           <GlobalColouredHeading v-for="(data) in card.headings" :type="data.heading_type" :text="data.text" />
         </div>
-        <div class="description">
+        <div class="description" v-if="text">
           <p>
             {{ text.replace(/(<([^>]+)>)/ig, '') }}
           </p>

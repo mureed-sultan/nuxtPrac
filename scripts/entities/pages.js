@@ -4,8 +4,6 @@ import { pageConfig } from '~/scripts/config/content-types.js';
 var pages = {};
 
 export async function getPage(slug) {
-  // slug = 'about'
-  // console.table(slug)
   if (pages[slug]) {
     return pages[slug];
   }
@@ -13,7 +11,7 @@ export async function getPage(slug) {
     endpoint: 'node/site_page?filter[field_page_id]=' + slug,
     include: pageConfig,
   });
-  pages[slug] = page;
   // console.log(page)
+  pages[slug] = page;
   return page;
 }

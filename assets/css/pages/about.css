@@ -1,7 +1,22 @@
-.about{
-   .card-and-text{
-    .card{
-       height: auto;
+.about {
+  .card-and-text {
+    .card {
+      height: auto;
     }
-   }
+  }
+}
+.card-point {
+  @apply text-center;
+  h1 {
+    @apply py-10 text-3xl;
+  }
+  .card-section {
+    @apply container mx-auto;
+    @apply grid gap-12;
+    grid-template-columns: repeat(auto-fill, minmax(21%, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(21%, 1fr);
+    overflow-x: auto;
+
+  }
 }

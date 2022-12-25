@@ -1,0 +1,11 @@
+.icons-card{
+    figure{
+        @apply w-20 h-20 mx-auto mb-5;
+    }
+    .heading{
+        @apply mb-5;
+       span{
+          @apply m-1;
+       }
+    }
+  }
