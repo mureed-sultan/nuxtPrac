@@ -1,0 +1,30 @@
+section.header {
+  background-color: var(--blue);
+  header {
+    @apply grid grid-cols-12 container mx-auto h-16;
+    .logo {
+      @apply col-span-3;
+    }
+    .menu {
+      @apply flex col-start-4 col-span-9 justify-end;
+      ul {
+        @apply flex items-center text-sm text-white;
+        li {
+          @apply px-1 relative;
+          &:hover{
+              &:after{
+                  width: 100%;
+                }
+            }
+            &:after{
+              transition: width 0.2s linear;
+            content: '';
+            @apply absolute w-0 bg-white left-0;
+            bottom: -2px;
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+}

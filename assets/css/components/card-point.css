@@ -1,23 +1,59 @@
 .card-point.light {
-  .para {
-    @apply pb-5 text-xs;
+  @apply relative;
+  .card-sections{
+    @apply relative;
   }
-  .top-para{
+  .para {
+    @apply p-5 text-xs;
+    a{
+      border-bottom:1px solid blue;
+      color:blue;
+    }
+  }
+
+  .top-para {
     @apply mb-5 text-xs w-10/12 m-auto;
   }
-  .card-section{
-    gap: 1.5rem;
-  }
-  .icon-cards {
+
+  .icons-card {
+    @apply h-full;
+    @apply mx-5;
     @apply bg-white;
+
     figure {
-      @apply w-full h-full;
+      @apply w-full;
+      height: 10rem;
     }
+
     .content {
-      @apply text-left px-3;
+      @apply text-left px-5;
       .heading span {
         color: var(--blue);
       }
+    }
+  }
+
+
+}
+
+.card-point.dark {
+
+  .card-section {
+    height: 22rem;
+    @apply relative;
+    width: 95vw;
+    margin: 0 auto;
+
+    .icons-card {
+      @apply px-5;
+    }
+
+    .swiper-button-prev {
+      left: -1.5rem;
+    }
+
+    .swiper-button-next {
+      right: -1.5rem;
     }
   }
 }

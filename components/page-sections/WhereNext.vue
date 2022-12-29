@@ -1,6 +1,6 @@
 <template>
     <section class="where-next">
-        <div v-for="(items) in card.linked_cards">
+        <div class="card-container" v-for="(items) in card.linked_cards">
             <Card v-if="items.title == 'worker-card'"
              text1="I am a" 
              text2="Skilled Worker"

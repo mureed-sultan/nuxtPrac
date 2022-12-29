@@ -11,10 +11,12 @@
     "autoprefixer": "^10.4.13",
     "nuxt": "^3.0.0",
     "postcss": "^8.4.20",
+    "sass": "^1.57.1",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
     "@nuxt/cli": "^2.15.8",
-    "@nuxtjs/axios": "^5.13.6"
+    "@nuxtjs/axios": "^5.13.6",
+    "swiper": "^8.4.5"
   }
 }

@@ -4,26 +4,14 @@
   </main>
 </template>
 
-<!-- <script>
-import { getPage } from '~/scripts/entities/pages.js';
-export default defineComponent({
-  props: {
-    page_id: String,
-    sections: Array,
-  },
-  async setup() {
-    return await getPage('home');
-  },
-})
-</script> -->
-
 <script setup>
 import { getPage } from '~/scripts/entities/pages.js';
+const route = useRoute();
 const props = defineProps({
   page_id:String,
   sections:Array
 })
-let page = await getPage('home')
+let page = await getPage(route.params.slug)
 
 // console.log(page)
 </script>

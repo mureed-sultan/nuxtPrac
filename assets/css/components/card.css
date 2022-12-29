@@ -1,7 +1,5 @@
 .card {
     @apply relative p-7;
-    height: 32rem;
-
     figure {
         @apply flex justify-end;
 

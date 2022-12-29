@@ -1,12 +1,12 @@
 <template>
-        <slot/>
+<the-header/>
+<LoadingBar :duration="1000" />
+
+    <slot />
 </template>
 
 <style>
-header{
-@apply flex justify-between;
-}
-.router-link-exact-active{
+.router-link-exact-active {
     color: rebeccapurple;
 }
 </style>

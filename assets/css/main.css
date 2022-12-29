@@ -10,29 +10,41 @@
 @import './components/card-hero-split.css';
 @import './components/card-point.css';
 
+/* layout  */
+@import './layout/header.css';
+
 
 /* declare tailwind  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+/* check code */
+/* *{
+  border: 1px solid black;
+} */
 img {
   @apply w-full h-full;
 }
 * {
   @apply m-0 p-0;
-}
-:root{
-  --yellow : #F4CA54;
-  --blue:#375C79;
+  box-sizing: border-box;
 }
 
-/* pages import  */
 .light{
   background-color: #E6E7EC;
 }
 .dark{
   background-color: #375C79;
   color: white;
+}
+:root{
+  --yellow : #F4CA54;
+  --blue:#375C79;
+}
+.reverse{
+  direction: rtl;
+  div{
+    direction: ltr;
+  }
 }

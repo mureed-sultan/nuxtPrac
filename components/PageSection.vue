@@ -1,26 +1,25 @@
 <template>
   <!-- page hero  -->
-  <PageHero v-if="section.type == 'page_hero'" :card="section.card" :text="section.card.description" />
+
+  <PageHero v-if="section.type == 'page_hero'" :card="section.card" :text="section.card.description" :detail="section.text" />
   <!-- where to next section  -->
   <WhereNext v-else-if="section.type == 'where_to_cards'" :card="section" />
   <!-- card and text section  -->
-  <CardAndText v-else-if="section.type == 'card_and_text' & section.classes == 'light'" :card="section.card"
+  <CardAndText v-else-if="section.type == 'card_and_text'" :card="section.card"
   :type="section.classes" :text="section.text" />
   <!-- card points sec  -->
-  <CardPoint v-else-if="section.type == 'card_points' & section.classes == 'dark'" :card="section.cards"
+  <CardPoint v-else-if="section.type == 'card_points'" 
+  :card="section.cards"
+  :sec="section"
   :heading="section.heading_text.headings[0]"
   :type="section.classes"
   />
   <!-- card hero split section  -->
   <CardHeroSplit v-else-if="section.type=='card_hero_split'" :card="section.split_cards"/>
-  <CardPoint v-else-if="section.type == 'card_points'" :card="section.cards"
-    :heading="section.heading_text.headings[0]"
-    :toppara="section.heading_text.text"
-    :detail="section.cta_text"
-    type="light"
-    /> 
-  <!-- <CardAndText v-else-if="section.type == 'card_and_text'" :card="section.card"
-  :type="section.classes" :text="section.text" />     -->
+
+  <!-- <div v-else-if="section.type == 'card_and_text'">
+{{ section }}
+  </div> -->
   <div v-else>
     <h1>
       {{ section.type }}

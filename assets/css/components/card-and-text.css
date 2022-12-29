@@ -1,23 +1,88 @@
-.card-and-text{
-  @apply grid grid-cols-2 m-auto px-8 pt-14;
-  .card{
-    .heading{
+.card-and-text.light {
+  @apply grid grid-cols-1 m-auto px-8 pt-14;
+
+  @screen md {
+    @apply grid-cols-2;
+  }
+
+  .card {
+    .heading {
       @apply bottom-28 top-auto;
     }
   }
-  .text-section{
+
+  .text-section {
     @apply text-sm m-auto;
-    strong{
+
+    strong {
       color: var(--blue);
     }
-    h5{
+
+    h5 {
       background-color: var(--yellow);
       color: var(--blue);
       @apply text-lg px-2;
-       
+
     }
-    p{
+
+    p {
       @apply my-3;
+    }
+  }
+}
+
+.card-and-text.dark {
+  @apply grid grid-cols-1 m-auto px-8 pt-14 pb-8;
+
+  @screen md {
+    @apply grid-cols-2;
+  }
+
+  .card {
+    .heading {
+      @apply bottom-28 top-auto;
+    }
+  }
+
+  .text-section {
+    @apply text-sm m-auto;
+
+    p {
+      @apply my-2 text-sm;
+    }
+    ul{
+      @apply pl-5;
+      li{
+        @apply list-disc px-2;
+      }
+    }
+  }
+}
+
+.card-and-text.nopadding {
+  @apply grid grid-cols-1 m-auto pb-8;
+
+  @screen md {
+    @apply grid-cols-2;
+  }
+
+  .card {
+    .heading {
+      @apply bottom-28 top-auto;
+    }
+  }
+
+  .text-section {
+    @apply text-sm m-auto;
+
+    p {
+      @apply my-2 text-sm;
+    }
+    ul{
+      @apply pl-5;
+      li{
+        @apply list-disc px-2;
+      }
     }
   }
 }

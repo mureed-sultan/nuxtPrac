@@ -1,18 +1,20 @@
 <template>
+  
   <section class="pagehero">
-      <figure>
-        <img :src="'/_nuxt/static/' +card.media.image.uri.url.slice(21) " />
-       </figure>
-      <div class="content">
+    <figure>
+      <img :src="'/_nuxt/static/' +card.media.image.uri.url.slice(21) " />
+    </figure>
+    <div class="content">
       <div class="heading">
-          <GlobalColouredHeading v-for="(data) in card.headings" :type="data.heading_type" :text="data.text" />
-        </div>
-        <div class="description" v-if="text">
-          <p>
-            {{ text.replace(/(<([^>]+)>)/ig, '') }}
-          </p>
-        </div>
+        <GlobalColouredHeading v-for="(data) in card.headings" :type="data.heading_type" :text="data.text" />
       </div>
+      <div class="description" v-if="text">
+        <p>
+          {{ text.replace(/(<([^>]+)>)/ig, '') }}
+        </p>
+      </div>
+    </div>
+    <div class="details" v-html="htmlCode"></div>
   </section>
 </template>
 
@@ -20,15 +22,14 @@
 export default {
   props: {
     card: Object,
-    text: String
+    text: String,
+    detail:String
   },
-  // computed:{
-  //   backImage(){
-  //     return{
-  //       backgroundImage: 'url(/_nuxt/static/' + this.card.media.image.uri.url.slice(21) + ')'
-  //     }
-  //   }
-  // }
+  data() {
+    return {
+      htmlCode: this.detail,
+    };
+  },
 }
-</script>
 
+</script>
