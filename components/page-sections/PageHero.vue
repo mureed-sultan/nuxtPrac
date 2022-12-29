@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-    <div class="details" v-html="htmlCode"></div>
+    <div v-if="details" class="details" v-html="htmlCode"></div>
   </section>
 </template>
 
