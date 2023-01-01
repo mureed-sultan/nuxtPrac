@@ -47,7 +47,7 @@
 }
 
 .formated-text {
-  @apply mt-20;
+  @apply my-20;
   h5 {
     @apply text-4xl;
     color: var(--blue);

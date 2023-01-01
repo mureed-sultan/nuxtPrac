@@ -1,5 +1,7 @@
 .tab-button {
   background-color: var(--blue);
+  border-top: 3px solid white;
+  @apply relative;
   @apply pt-16 z-10 ;
   .tab-button-text {
     @apply text-center;
@@ -17,6 +19,22 @@
     .router-link-exact-active {
         color: red;
     }
-   } 
+   } &:after{
+
+     content: "";
+     position: absolute;
+     height: 2.5rem;
+     width: 2.5rem;
+     left: 50%;
+     bottom: -4.9rem;
+     z-index: 1;
+     border-color: transparent;
+     border-width: 2.5rem;
+     border-top-color: var(--blue);
+    }
   }
+}
+
+.tab-container{
+  @apply pt-20;
 }

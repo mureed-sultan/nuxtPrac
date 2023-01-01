@@ -1,5 +1,5 @@
 .where-next {
-  @apply grid grid-cols-1;
+  @apply grid grid-cols-1 pb-10;
   .details {
     @apply z-10;
   }

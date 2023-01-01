@@ -12,7 +12,7 @@
   }
 
   .text-section {
-    @apply text-sm m-auto;
+    @apply text-lg m-auto;
 
     strong {
       color: var(--blue);

@@ -50,7 +50,7 @@
     margin: 0 auto;
 
     .icons-card {
-      @apply px-5;
+      @apply mx-3;
     }
 
     .swiper-button-prev {
@@ -61,4 +61,17 @@
       right: -1rem;
     }
   }
+}
+.icons-card.cardstack{
+@apply bg-white h-full pb-10;
+figure{
+  @apply w-auto;
+}
+.content{
+  @apply text-black px-3 text-justify;
+  .heading span{
+    @apply text-xl font-bold;
+    color: var(--blue);
+  }
+}
 }

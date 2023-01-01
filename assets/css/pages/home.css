@@ -1,8 +1,9 @@
 .pagehero {
   @apply relative;
-  height: 80vh;
   figure{
-    height: 100%;
+    img{
+      max-height: 75vh;
+    }
   }
   .content {
     @apply h-full absolute top-10 left-12;
@@ -29,13 +30,25 @@
     }
   }
   .details{
+    @apply py-10;
     p{
-      @apply w-10/12 mx-auto text-white text-base py-10;
+      @apply w-10/12 mx-auto text-white text-base py-2;
     }
     background-color:var(--blue);
-    @apply absolute bottom-0;
+    @apply relative;
     @apply w-full;
-
+    &:after{
+      content:"";
+      @apply absolute w-10 h-10 ;
+      left:50%;
+      bottom: -4.9rem;
+      z-index: 1;
+      border-color:transparent;
+      border-width:2.5rem;
+      border-top-color:var(--blue);
+  
+    }
   }
+  
 
 }

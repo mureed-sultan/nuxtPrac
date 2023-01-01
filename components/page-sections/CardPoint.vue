@@ -10,14 +10,13 @@
         <div class="swiper-wrapper">
           <div v-for="(item, i) in card" :key="i" class="swiper-slide" :class="`slide--${i}`">
             <div class="slider-content">
-              <IconCard :image="'/cardpoint/cardpoint' + i + '.jpg'" :detail="item.description"
-                :heading="item.headings" />
-
-            </div>
+              <IconCard :class="sec.theme" :image="'/cardpoint/cardpoint' + i + '.jpg'" :detail="item.description"
+                :heading="item.headings"
+                />
+              </div>
           </div>
         </div>
         <!-- <div class="swiper-pagination"></div> -->
-
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
@@ -41,7 +40,6 @@ export default {
     type: String,
     toppara: String,
     detail: String,
-    main: Object,
     sec: Object
   },
   components: { IconCard, ColouredHeading },
@@ -104,5 +102,8 @@ export default {
 
 .slider-content {
   height: 100% !important;
+}
+.parimary{
+  @apply bg-white;
 }
 </style>
