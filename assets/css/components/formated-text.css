@@ -1,0 +1,61 @@
+.formated-text.light {
+  @apply py-12;
+  h2 {
+    @apply mt-2 text-3xl font-bold;
+    color: var(--blue);
+  }
+  p {
+    @apply mt-2 text-lg font-normal;
+    a {
+      @apply underline;
+    }
+  }
+  .text-align-center {
+    @apply text-center;
+  }
+}
+
+.formated-text.dark {
+  @apply py-12;
+  h2 {
+    @apply mt-2 text-3xl font-bold;
+    color: white;
+  }
+  p {
+    @apply mt-2 text-lg font-normal;
+    a {
+      @apply underline;
+    }
+  }
+  ul {
+    @apply w-9/12 mx-auto pl-10;
+    li {
+      a {
+        @apply underline;
+      }
+      &:before {
+        content: "\2022";
+        color: var(--yellow);
+        @apply inline-block w-4;
+        margin-left: -1em;
+      }
+    }
+  }
+  .text-align-center {
+    @apply text-center;
+  }
+}
+
+.formated-text {
+  @apply mt-20;
+  h5 {
+    @apply text-4xl;
+    color: var(--blue);
+  }
+  p {
+    @apply mt-5 text-lg font-normal;
+    a {
+      @apply underline;
+    }
+  }
+}

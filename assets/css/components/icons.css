@@ -1,0 +1,13 @@
+.icons{
+    @apply py-7;
+    h2{
+        @apply text-center text-3xl font-bold;
+        color: var(--blue)
+    }
+    .icon-image{
+        @apply flex w-10/12 mx-auto mt-3 flex-row flex-wrap justify-center;
+        figure{
+            @apply m-3 w-48;
+        }
+    }
+}

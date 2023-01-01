@@ -1,0 +1,29 @@
+.two-cards {
+  .two-card-inner {
+    grid-auto-rows: 0;
+    @apply grid grid-cols-12 overflow-hidden;
+    grid-template-rows: 100px 1fr 1fr;
+    .card-sect {
+      @apply col-span-12 row-span-3;
+      @screen md {
+        @apply col-span-6;
+      }
+    }
+    .para {
+      @apply row-span-1 col-span-12 flex justify-center items-center;
+      @screen md {
+        @apply col-span-6;
+      }
+    }
+    .icons-card {
+      @apply row-span-1 col-span-6;
+      @screen md {
+        @apply col-span-3;
+      }
+      .icon-text {
+        @apply flex justify-center;
+        color: var(--blue);
+      }
+    }
+  }
+}

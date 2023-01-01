@@ -27,7 +27,8 @@
     }
 
     .btn-primary {
-        @apply absolute bottom-0 flex justify-center w-full;
+        @apply absolute bottom-0 flex justify-center;
+        width: 90%;
 
         a {
             width: 6rem;

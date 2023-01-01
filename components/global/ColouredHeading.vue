@@ -1,28 +1,29 @@
 <template>
-<span :class="type">{{ text }}</span>
+  <span :class="type">{{ text }}</span>
 </template>
 
 <script>
 export default {
-  props:{
-    text:String,
-    type:String
+  props: {
+    text: String,
+    type: String
   }
 }
 </script>
 <style>
-.primary{
+.primary {
   background-color: var(--yellow);
   color: var(--blue);
   @apply p-1;
 }
-.secondary{
+
+.secondary {
   background-color: var(--blue);
   color: white;
   @apply p-1;
 }
-.default{
+
+.default {
   color: white;
-  @apply p-1;
 }
 </style>

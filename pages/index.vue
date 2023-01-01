@@ -24,6 +24,5 @@ const props = defineProps({
   sections:Array
 })
 let page = await getPage('home')
-
-// console.log(page)
+// console.log(page , getPage)
 </script>

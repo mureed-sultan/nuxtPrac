@@ -1,24 +1,50 @@
 section.header {
   background-color: var(--blue);
   header {
-    @apply grid grid-cols-12 container mx-auto h-16;
+    @apply grid grid-cols-12 container mx-auto py-7 items-center;
+
     .logo {
-      @apply col-span-3;
+      @apply col-start-4 col-span-5 justify-self-center;
+      @screen sm{
+        @apply col-span-10;
+      }
+      @screen md {
+        @apply col-span-3;
+      }
     }
-    .menu {
-      @apply flex col-start-4 col-span-9 justify-end;
-      ul {
-        @apply flex items-center text-sm text-white;
-        li {
-          @apply px-1 relative;
-          &:hover{
-              &:after{
-                  width: 100%;
-                }
+    .menu-button {
+      @screen md {
+        display: none;
+      }
+    }
+    .menu-container {
+      .menu {
+        transition: opacity 1s ease-out;
+        @screen md{
+          display: block;
+        }
+      }
+      @apply col-span-12;
+      ul{
+        @apply text-center text-white mt-20 font-bold;
+        li{
+          @apply mt-7;
+        } 
+      }
+      @screen md{
+        @apply flex col-start-4 col-span-9 justify-end;
+        ul {
+          @apply flex items-center text-sm text-white mt-0;
+          li {
+            @apply px-1 relative m-0;
+            &:hover {
+              &:after {
+                width: 100%;
+              }
             }
-            &:after{
+            &:after {
               transition: width 0.2s linear;
-            content: '';
+              content: "";
             @apply absolute w-0 bg-white left-0;
             bottom: -2px;
             height: 2px;
@@ -26,5 +52,48 @@ section.header {
         }
       }
     }
+  }
+
+}
+}
+
+
+.menu-button {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  transition-duration: 250ms;
+  &:after {
+    transition-duration: 1s;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 0.8rem;
+    position: absolute;
+    left: 0;
+  }
+  &:before {
+    top: 0;
+    transition-duration: 1s;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: -0.8rem;
+    position: absolute;
+  }
+}
+.crossActive{
+  height: 0px;
+  &:before{
+    transform: rotate(45deg);
+    margin-top:0rem;
+  }
+  &:after{
+    margin-top:0rem;
+    transform: rotate(-45deg);
   }
 }

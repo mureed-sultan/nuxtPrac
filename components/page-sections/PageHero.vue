@@ -1,8 +1,8 @@
 <template>
-  
+
   <section class="pagehero">
     <figure>
-      <img :src="'/_nuxt/static/' +card.media.image.uri.url.slice(21) " />
+      <img :src="'/_nuxt/static/' + card.media.image.uri.url.slice(21)" />
     </figure>
     <div class="content">
       <div class="heading">
@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-    <div v-if="details" class="details" v-html="htmlCode"></div>
+    <div v-if="detail" class="details" v-html="htmlCode"></div>
   </section>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   props: {
     card: Object,
     text: String,
-    detail:String
+    detail: String
   },
   data() {
     return {

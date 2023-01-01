@@ -9,9 +9,14 @@
 @import './components/icon-card.css';
 @import './components/card-hero-split.css';
 @import './components/card-point.css';
+@import './components/formated-text.css';
+@import './components/tab-button.css';
+@import './components/two-cards.css';
+@import './components/icons.css';
 
 /* layout  */
 @import './layout/header.css';
+@import './layout/footer.css';
 
 
 /* declare tailwind  */
@@ -29,6 +34,7 @@ img {
 * {
   @apply m-0 p-0;
   box-sizing: border-box;
+  /* border: 1px solid blueviolet; */
 }
 
 .light{

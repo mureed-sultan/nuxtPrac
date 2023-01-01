@@ -1,5 +1,5 @@
 <template>
-  <section class="card-point" :class="type ? 'dark' : 'light'">
+  <section class="card-point" :class="type ? type : 'light'">
     <h1>
       <ColouredHeading :text="heading.text" :type="heading.heading_type" />
     </h1>
@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -33,7 +33,6 @@ import IconCard from '../global/IconCard.vue';
 import { Swiper, Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 
-
 export default {
   name: 'MyComponent',
   props: {
@@ -42,10 +41,11 @@ export default {
     type: String,
     toppara: String,
     detail: String,
-    main:Object,
-    sec:Object
+    main: Object,
+    sec: Object
   },
   components: { IconCard, ColouredHeading },
+
   data() {
     return {
       htmlCode: this.detail,
@@ -53,13 +53,7 @@ export default {
     };
   },
   mounted() {
-    // configure Swiper to use modules. The modules were tested with SwiperJS v6.8.4 with NuxtJS v2.15.7
-    // previously it was before export default. Moved here for performance issues. Move back in case of problems.
-    // add or remove unused modules
     Swiper.use([Navigation, Pagination, Autoplay])
-
-    // init Swiper:
-    /* eslint-disable no-unused-vars */
     const swiper = new Swiper('.swiper', {
       slidesPerView: 1,
       slidesPerGroup: 1,
@@ -102,11 +96,13 @@ export default {
   width: 90vw;
   height: 100%;
 }
+
 .swiper-slide {
-height: auto !important;
-text-align: center;
+  height: auto !important;
+  text-align: center;
 }
-.slider-content{
+
+.slider-content {
   height: 100% !important;
 }
 </style>

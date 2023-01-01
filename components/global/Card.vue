@@ -15,7 +15,7 @@
       </div>
       <div v-if="description" class="description" v-html="htmlCode"></div>
       <div v-if="link" class="btn-primary">
-        <GlobalButtons btn-text="Learn More" :btnLink="link" btn-type="primary" />
+        <GlobalButtons :btn-text="btnText" :btnLink="link" btn-type="primary" />
       </div>
     </div>
   </div>
@@ -36,6 +36,7 @@ export default {
     textType1: String,
     textType2: String,
     textType3: String,
+    btnText: String
   },
   components: { ColouredHeading },
   data() {

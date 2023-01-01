@@ -45,7 +45,7 @@
   }
 
   .text-section {
-    @apply text-sm m-auto;
+    @apply text-lg m-auto;
 
     p {
       @apply my-2 text-sm;
@@ -60,6 +60,9 @@
 }
 
 .card-and-text.nopadding {
+  .card{
+    @apply py-0;
+  }
   @apply grid grid-cols-1 m-auto pb-8;
 
   @screen md {
@@ -73,7 +76,7 @@
   }
 
   .text-section {
-    @apply text-sm m-auto;
+    @apply text-lg m-auto;
 
     p {
       @apply my-2 text-sm;

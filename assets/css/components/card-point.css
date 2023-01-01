@@ -1,4 +1,10 @@
 .card-point.light {
+  h1{
+    span.default{
+      @apply text-3xl font-bold;
+      color:var(--blue)
+    }
+  }
   @apply relative;
   .card-sections{
     @apply relative;
@@ -39,7 +45,6 @@
 .card-point.dark {
 
   .card-section {
-    height: 22rem;
     @apply relative;
     width: 95vw;
     margin: 0 auto;
@@ -49,11 +54,11 @@
     }
 
     .swiper-button-prev {
-      left: -1.5rem;
+      left: -1rem;
     }
 
     .swiper-button-next {
-      right: -1.5rem;
+      right: -1rem;
     }
   }
 }
